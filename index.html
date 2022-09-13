@@ -16,22 +16,196 @@
     <link rel="apple-touch-icon" href="icon.png" />
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"
+    />
+    <link rel="stylesheet" href="css/locomotive-scroll.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
 
   <body>
-    <!-- Add your site or application content here -->
-    <p>Hello world! This is HTML5 Boilerplate.</p>
-    <p class="font-inter">Hello world! This is HTML5 Boilerplate.</p>
-    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-    <script src="js/plugins.js"></script>
+    <nav
+      class="backdrop-blur-sm px-2 sm:px-4 py-2.5 fixed w-full z-40 top-0 left-0 border-b-2 bg-dark/80 border-grey"
+    >
+      <div
+        class="container flex flex-wrap justify-between items-center mx-auto"
+      >
+        <a href="/" class="flex items-center">
+          <img
+            src="https://flowbite.com/docs/images/logo.svg"
+            class="mr-3 h-6 sm:h-9"
+            alt="Logo"
+          />
+          <span
+            class="self-center text-xl font-semibold whitespace-nowrap text-light"
+            >Socaco</span
+          >
+        </a>
+        <div class="flex">
+          <button
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+            class="inline-flex items-center p-2 text-base rounded-lg md:hidden hover:bg-grey focus:outline-none focus:ring-2 focus:ring-light/50 text-light"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="hidden relative justify-between items-center w-full md:flex md:w-auto space-x-4"
+        >
+          <ul
+            class="nav-indicator relative flex flex-col p-4 mt-4 rounded-lg border md:flex-row md:space-x-8 md:mt-0 md:text-base md:font-medium md:border-0"
+          >
+            <div class="nav-pointer"></div>
+            <li class="md:!ml-0">
+              <a
+                href="#"
+                class="current block py-2 px-4 text-light/60 rounded hover:text-light md:p-0"
+                aria-current="page"
+                >Beranda</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-4 text-light/60 rounded hover:text-light md:p-0"
+                >Visi dan Misi</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-4 text-light/60 rounded hover:text-light md:p-0"
+                >Tentang Kami</a
+              >
+            </li>
+          </ul>
+          <button
+            type="button"
+            class="text-light bg-primary hover:bg-primary-dark focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base px-5 py-2.5 text-center"
+          >
+            Donasi Sekarang
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main data-scroll-container="">
+      <section
+        class="pt-32 pb-20 h-full flex"
+        data-scroll
+        data-scroll-speed="-3"
+      >
+        <div class="container mx-auto h-full flex-1">
+          <div class="grid grid-cols-1 lg:grid-cols-3 h-full">
+            <div
+              class="flex flex-col justify-center space-y-4"
+              data-scroll
+              data-scroll-speed="1"
+            >
+              <h1 class="text-4xl lg:text-5xl font-bold">
+                Ulurkan tanganmu dan bantu mereka.
+              </h1>
+              <p class="text-base">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error
+                animi voluptas perspiciatis enim nesciunt iste labore, dolores
+                consequuntur consectetur quas, quisquam minus.
+              </p>
+            </div>
+            <div
+              class="flex items-center justify-end lg:col-span-2 mt-10 md:mb-0"
+            >
+              <div class="lg:w-4/5">
+                <img
+                  src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2hhcml0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                  class="w-full"
+                  alt="Hero"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="bg-light h-full py-14">
+        <div class="container mx-auto h-full">
+          <div class="grid grid-cols-3 h-full">
+            <div class="flex flex-col justify-center space-y-2">
+              <h3 class="text-primary-dark text-5xl font-bold">290,000+</h3>
+              <span class="text-dark text-3xl font-semibold">Donatur</span>
+            </div>
+            <div class="flex flex-col justify-center space-y-2">
+              <h3 class="text-primary-dark text-5xl font-bold">290,000+</h3>
+              <span class="text-dark text-3xl font-semibold">Donatur</span>
+            </div>
+            <div class="flex flex-col justify-center space-y-2">
+              <h3 class="text-primary-dark text-5xl font-bold">290,000+</h3>
+              <span class="text-dark text-3xl font-semibold">Donatur</span>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <section class="bg-grey/50 h-full py-32 pt-40">
+        <div class="container mx-auto h-full">
+          <div class="flex flex-col items-center space-y-6">
+            <h2 class="text-light font-bold text-5xl" data-scroll>
+              Bantu Mereka
+            </h2>
+            <p class="md:w-96 text-center w-full" data-scroll>
+              Sedikit dari anda akan sangat berarti untuk meringankan beban
+              mereka.
+            </p>
+            <div class="grid grid-cols-3 h-full">
+              <div class="flex flex-col bg-light">
+                <div class="">
+                  <img
+                    src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y2hhcml0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                    alt=""
+                  />
+                </div>
+                <div class="text-dark p-6">
+                  <h4 class="text-xl font-semibold">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </h4>
+                  <span class="text-primary-dark text-sm">Sarah Doe</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="min-h-screen bg-primary h-full flex"></section>
+    </main>
+
+    <script src="js/vendor/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
     <script src="js/main.js"></script>
 
     <!-- Google tag (gtag.js) -->
