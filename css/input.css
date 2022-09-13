@@ -4,5 +4,23 @@
 
 body,
 html {
-  @apply font-inter;
+  @apply font-inter bg-dark min-h-screen text-light;
+}
+
+@layer components {
+  .nav-pointer {
+    z-index: 1;
+    position: absolute;
+    top: 75%;
+    transform: translateY(-50%);
+    left: 1rem;
+    height: 3px;
+    width: 50px;
+    transition: transform 0.25s ease-in-out;
+    border-radius: 0.3em;
+    @apply bg-primary;
+  }
+  .nav-indicator .current {
+    @apply text-light;
+  }
 }
