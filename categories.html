@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Kategori - Social Care Comunity</title>
+    <style>
+      .swiper-wrapper {
+        /* transition-delay: 100ms; */
+        transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+        transition-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+        /* transition-timing-function: cubic-bezier(0.83, 0, 0.17, 1); */
+        /* transition-timing-function: cubic-bezier(0.25, 0.74, 0.22, 0.99); */
+        /* transition-timing-function: ease; */
+        transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+      }
+      .swiper-slide {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        max-width: 55vw;
+        /* max-width: 75vw; */
+      }
+      .swiper-slide.swiper-slide-active .image-front::after {
+        background-color: transparent;
+        pointer-events: none;
+      }
+      .swiper-slide.swiper-slide-active .image-back {
+        opacity: 0.5;
+      }
+      .swiper-slide.swiper-slide-active .image-link:hover .icon-link {
+        transform: translate(-50%, -50%) scale(1.15);
+        color: white;
+        transition-property: transform, color;
+        transition-timing-function: cubic-bezier(0.25, 0.74, 0.22, 0.99);
+        transition-duration: 500ms;
+      }
+      .swiper-slide.swiper-slide-active .image-link:hover .image-back.right {
+        transition-duration: 800ms !important;
+        transform: translateX(20%);
+      }
+      .swiper-slide.swiper-slide-active .image-link:hover .image-back.left {
+        transition-duration: 800ms !important;
+        transform: translateX(-20%);
+      }
+      .swiper-slide:not(.swiper-slide-active)
+        .image-link:hover
+        .image-front
+        img,
+      .swiper-slide.swiper-slide-active .image-link .image-front img {
+        transform: scale(1.2);
+        transition-duration: 1s;
+        transition-property: transform;
+        /* transition-timing-function: cubic-bezier(0.25, 0.74, 0.22, 0.99); */
+      }
+      .image-link {
+        display: block;
+        margin-inline: auto;
+        width: 26vw;
+        position: relative;
+        top: 50%;
+        height: max-content;
+        transform: translateY(-50%);
+      }
+      .icon-link {
+        display: block;
+        background-color: black;
+        border-radius: 999px;
+        height: 4rem;
+        width: 4rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 100;
+        transform: translate(-50%, -50%);
+        display: grid;
+        place-items: center;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        color: #f97316;
+        transition-property: transform, color;
+        transition-timing-function: cubic-bezier(0.25, 0.74, 0.22, 0.99);
+        transition-duration: 500ms;
+      }
+      .image-front {
+        z-index: 10;
+        overflow: hidden;
+        width: 25vw;
+        /* top: 50%;
+        position: absolute;
+        transform: translateY(-50%); */
+      }
+      .image-front::after {
+        content: "";
+        inset: 0;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 10;
+        transition-property: background-color;
+        transition-duration: 1000ms;
+        transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+      }
+      .image-front img {
+        transition-duration: 1000ms;
+        transition-property: transform;
+        transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+        transition-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+        transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+      }
+      .image-back {
+        /* display: none; */
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+        opacity: 0;
+        height: auto;
+        top: auto;
+        bottom: auto;
+        transition-duration: 1s;
+        transition-property: transform, opacity;
+        transition-timing-function: cubic-bezier(0.25, 0.74, 0.22, 0.99);
+        transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+      }
+      .image-back.right {
+        right: -20vmax;
+        right: -80%;
+        right: -20vw;
+        right: -15rem;
+      }
+      .image-back.left {
+        left: -10vmax;
+        left: -40%;
+        left: -10vw;
+        left: 5rem;
+      }
+      .image-back[data-y="top"] {
+        top: 0;
+      }
+      .image-back[data-y="bottom"] {
+        bottom: 0;
+      }
+      .image-back img {
+        height: auto;
+        height: 8rem;
+        transition-duration: 1200ms;
+        transition-timing-function: cubic-bezier(0.25, 0.74, 0.22, 0.99);
+        transition-timing-function: cubic-bezier(0.13, 0.41, 0.1, 1);
+        transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+      }
+      .carousel-title,
+      .carousel-counter {
+        z-index: 100;
+        position: absolute;
+        bottom: 3rem;
+        width: 100%;
+        text-align: center;
+        pointer-events: none;
+      }
+      .carousel-counter {
+        bottom: 2rem;
+      }
+      .tabs-contents {
+        overflow: hidden;
+        height: 128px;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+      }
+      .tab-content {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+        transition-property: top, opacity;
+        transition-duration: 0s;
+        transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+        transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+        transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+      }
+      .tab-content.active {
+        top: 0;
+        opacity: 1;
+        transition-duration: 1s;
+      }
+      .tab-content.down {
+        transition-duration: 1s;
+        opacity: 0;
+        top: 100% !important;
+      }
+      .tab-content h2 {
+        text-transform: uppercase;
+        font-size: 8rem;
+        line-height: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper gallery-carousel h-screen">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a class="image-link" href="#">
+            <figure class="image-back" data-y="top">
+              <!-- https://source.unsplash.com/random/?medical -->
+              <img
+                class="swiper-lazy"
+                src="https://source.unsplash.com/random/?medical"
+                alt=""
+              />
+            </figure>
+            <figure class="image-back" data-y="bottom">
+              <!-- https://source.unsplash.com/random/?medical -->
+              <img
+                class="swiper-lazy"
+                src="https://source.unsplash.com/random/?medical"
+                alt=""
+              />
+            </figure>
+            <figure class="image-front">
+              <!-- https://unsplash.com/photos/w7Pby5bDKW4 -->
+              <img
+                class="swiper-lazy"
+                src="https://images.unsplash.com/photo-1580281657702-257584239a55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTF8fG1lZGljYWx8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt=""
+              />
+            </figure>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a class="image-link" href="#">
+            <figure class="image-back" data-y="bottom">
+              <!-- https://source.unsplash.com/random/?education -->
+              <img
+                class="swiper-lazy"
+                src="https://source.unsplash.com/random/?education"
+                alt=""
+              />
+            </figure>
+            <figure class="image-back" data-y="top">
+              <!-- https://source.unsplash.com/random/?education -->
+              <img
+                class="swiper-lazy"
+                src="https://source.unsplash.com/random/?education"
+                alt=""
+              />
+            </figure>
+            <figure class="image-front">
+              <!-- https://unsplash.com/photos/gcw_WWu_uBQ -->
+              <img
+                class="swiper-lazy"
+                src="https://images.unsplash.com/photo-1503542724004-53e16040c0c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                alt=""
+              />
+            </figure>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a class="image-link" href="#">
+            <figure class="image-back" data-y="top">
+              <!-- https://source.unsplash.com/random/?social -->
+              <img
+                class="swiper-lazy"
+                src="https://source.unsplash.com/random/?social"
+                alt=""
+              />
+            </figure>
+            <figure class="image-back" data-y="bottom">
+              <!-- https://source.unsplash.com/random/?social -->
+              <img
+                class="swiper-lazy"
+                src="https://source.unsplash.com/random/?social"
+                alt=""
+              />
+            </figure>
+            <figure class="image-front">
+              <!-- https://unsplash.com/photos/DNkoNXQti3c -->
+              <img
+                class="swiper-lazy"
+                src="https://images.unsplash.com/photo-1527525443983-6e60c75fff46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c29jaWFsfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt=""
+              />
+            </figure>
+          </a>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="carousel-title">
+      <ul class="tabs-contents">
+        <li class="tab-content">
+          <h2 class="text-4xl">Kesehatan</h2>
+        </li>
+        <li class="tab-content">
+          <h2 class="text-4xl">Pendidikan</h2>
+        </li>
+        <li class="tab-content">
+          <h2 class="text-4xl">Sosial</h2>
+        </li>
+      </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".gallery-carousel", {
+        resistance: true,
+        resistanceRatio: 0,
+        direction: "horizontal",
+        slidesPerView: "auto",
+        speed: (40 / 30) * 1e3,
+        loop: true,
+        centeredSlides: true,
+        spaceBetween: 0,
+        mousewheel: true,
+        grabCursor: true,
+        centeredSlidesBounds: true,
+        watchSlidesProgress: true,
+        lazy: {
+          loadPrevNext: true,
+        },
+        keyboard: {
+          enabled: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+          renderFraction: function (currentClass, totalClass) {
+            return `<b class="${currentClass}"></b>/<span class="${totalClass}"></span>`;
+          },
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        slideDuplicateActiveClass: "swiper-slide-active",
+      });
+
+      $(".image-link").each(function (index) {
+        // const imgUrl = "https://picsum.photos/400/500?random=";
+        $(this).data("index", index);
+        $(".tab-content").eq(index).data("index", index);
+        // $(this).find("img").attr("src", `${imgUrl}${index}`);
+        // $(this).find("img").data("src", `${imgUrl}${index}`);
+        // $(this).find("img").data("srcset", `${imgUrl}${index}`);
+      });
+
+      $(".image-back").each(function (index) {
+        if (index % 2 === 1) $(this).addClass("left");
+        else $(this).addClass("right");
+      });
+
+      const imgBackFirst = $(".swiper-slide.swiper-slide-active")
+        .first()
+        .find(".image-back");
+      imgBackFirst.find("img").css("transform", `translateX(-80%)`);
+
+      swiper.on("progress", function (swiper, progress) {
+        swiper.slides.map(function (slide, index) {
+          const imgBack = $(slide).find(".image-back");
+          let slideProgress = (slide.progress * slide.swiperSlideSize) / 28;
+          imgBack
+            .find("img")
+            .css("transform", `translateX(${slideProgress}rem)`);
+        });
+      });
+
+      $(".tab-content").first().addClass("active");
+      swiper.on("slideChangeTransitionStart", function (swiper) {
+        $(".tab-content").removeClass("down", "active");
+        $(".tab-content").eq(swiper.realIndex).addClass("active");
+        $(".tab-content")
+          .not($(".tab-content").eq(swiper.realIndex))
+          .addClass("down");
+      });
+
+      swiper.on("setTransition", function (swiper, speed) {
+        $(swiper.$wrapperEl).css("transition-duration", `${speed}ms`);
+        swiper.slides.map(function (slide, index) {
+          $(slide)
+            .find(".image-back img")
+            .css("transition-duration", `${speed}ms`);
+          if (speed)
+            $(slide)
+              .find(".image-back")
+              .css("transition-duration", `${speed}ms`);
+        });
+      });
+    </script>
+  </body>
+</html>
