@@ -28,6 +28,13 @@
     <link rel="stylesheet" href="css/flowbite.min.css" />
     <link rel="stylesheet" href="css/locomotive-scroll.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="./css/aos.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </head>
 
   <body>
@@ -41,17 +48,17 @@
         >
           <div class="flex pr-4">
             <a href="/" class="flex items-center">
-              <img src="logo.png" class="mr-3 h-10 sm:h-12" alt="Logo" />
+              <img src="logo.png" class="h-10 mr-3 sm:h-12" alt="Logo" />
             </a>
-            <form class="w-full lg:w-96 flex-1">
+            <form class="flex-1 w-full lg:w-96">
               <label
                 for="default-search"
-                class="mb-2 font-medium text-light sr-only"
+                class="mb-2 font-medium sr-only text-light"
                 >Search</label
               >
               <div class="relative">
                 <div
-                  class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
+                  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
                 >
                   <svg
                     aria-hidden="true"
@@ -72,7 +79,7 @@
                 <input
                   type="text"
                   id="default-search"
-                  class="block px-5 py-3 pl-10 w-full text-light rounded-lg border border-transparent focus:ring-transparent focus:border-light bg-grey"
+                  class="block w-full px-5 py-3 pl-10 border border-transparent rounded-lg text-light focus:ring-transparent focus:border-light bg-grey"
                   placeholder="Search here..."
                   required=""
                 />
@@ -104,37 +111,37 @@
           </div>
 
           <div
-            class="hidden relative justify-between items-center w-full md:flex md:w-auto space-x-4"
+            class="relative items-center justify-between hidden w-full space-x-4 md:flex md:w-auto"
           >
             <ul
-              class="nav-indicator relative flex flex-col p-4 mt-4 rounded-lg border md:flex-row md:space-x-8 md:mt-0 md:text-base md:font-medium md:border-0"
+              class="relative flex flex-col p-4 mt-4 border rounded-lg nav-indicator md:flex-row md:space-x-8 md:mt-0 md:text-base md:font-medium md:border-0"
             >
               <div class="nav-pointer"></div>
               <li class="md:!ml-0">
                 <a
                   href="index.html"
-                  class="block py-2 px-4 text-light/60 rounded hover:text-light md:p-0"
+                  class="block px-4 py-2 rounded text-light/60 hover:text-light md:p-0"
                   >Beranda</a
                 >
               </li>
               <li>
                 <a
                   href="categories.html"
-                  class="block py-2 px-4 text-light/60 rounded hover:text-light md:p-0"
+                  class="block px-4 py-2 rounded text-light/60 hover:text-light md:p-0"
                   >Kategori</a
                 >
               </li>
               <li>
                 <a
                   href="list.html"
-                  class="block py-2 px-4 text-light/60 rounded hover:text-light md:p-0"
+                  class="block px-4 py-2 rounded text-light/60 hover:text-light md:p-0"
                   >Donasi</a
                 >
               </li>
               <li>
                 <a
                   href="signin.html"
-                  class="block py-2 px-4 text-light/60 rounded hover:text-light md:p-0"
+                  class="block px-4 py-2 rounded text-light/60 hover:text-light md:p-0"
                   >Masuk</a
                 >
               </li>
@@ -154,7 +161,7 @@
           <li><a class="" href="categories.html">Kategori</a></li>
           <li><a class="" href="list.html">Donasi</a></li>
         </ul>
-        <div class="grid grid-cols-2 px-6 py-8 gap-6 auth">
+        <div class="grid grid-cols-2 gap-6 px-6 py-8 auth">
           <a
             href="signin.html"
             class="text-light bg-transparent border-2 border-primary-dark hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base py-2.5 text-center waves-effect btn-animate -translate-x-[200%]"
@@ -172,18 +179,18 @@
       <div class="page-pusher">
         <div class="page-content bg-dark" data-scroll-container="">
           <section
-            class="pt-32 pb-20 h-full flex"
+            class="flex h-full pt-32 pb-20"
             data-scroll
-            data-scroll-speed="-3"
+            data-scroll-speed="-3" 
           >
-            <div class="container mx-auto h-full flex-1">
-              <div class="grid grid-cols-1 lg:grid-cols-5 h-full lg:space-x-20">
+            <div class="container flex-1 h-full mx-auto">
+              <div class="grid h-full grid-cols-1 lg:grid-cols-5 lg:space-x-20">
                 <div
                   class="flex flex-col justify-center space-y-4 lg:col-span-2"
                   data-scroll
                   data-scroll-speed="1"
                 >
-                  <h1 class="text-4xl lg:text-6xl font-bold">
+                  <h1 class="text-4xl font-bold lg:text-6xl">
                     Ulurkan Tanganmu dan Bantu Mereka
                   </h1>
                   <p class="text-base">
@@ -194,13 +201,13 @@
                   </p>
                   <button
                     type="button"
-                    class="text-light bg-primary-dark hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base px-5 py-3 text-center waves-effect w-max"
+                    class="px-5 py-3 text-base font-medium text-center rounded text-light bg-primary-dark hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary/40 waves-effect w-max"
                   >
                     Donasi Sekarang
                   </button>
                 </div>
                 <div
-                  class="flex items-center justify-end lg:col-span-3 mt-10 md:mb-0"
+                  class="flex items-center justify-end mt-10 lg:col-span-3 md:mb-0"
                 >
                   <div class="w-full">
                     <img
@@ -213,10 +220,10 @@
               </div>
             </div>
           </section>
-          <section class="bg-grey h-full py-32 pt-40">
-            <div class="container mx-auto h-full">
-              <div class="grid grid-cols-1 lg:grid-cols-3 lg:space-x-20 h-full">
-                <div class="relative h-full overflow-hidden">
+          <section class="h-full py-32 pt-40 bg-grey">
+            <div class="container h-full mx-auto">
+              <div class="grid h-full grid-cols-1 lg:grid-cols-3 lg:space-x-20">
+                <div class="relative h-full overflow-hidden"  data-aos="fade-down">
                   <img
                     src="https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dm9sdW50ZWVyfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60"
                     alt="Help"
@@ -234,44 +241,44 @@
                   ></div>
                 </div>
                 <div
-                  class="flex flex-col items-center justify-center lg:col-span-2 space-y-4 py-20"
+                  class="flex flex-col items-center justify-center py-20 space-y-4 lg:col-span-2"
                 >
-                  <h2 class="text-4xl lg:text-6xl font-bold">
+                  <h2 class="text-4xl font-bold lg:text-6xl">
                     Visi dan Misi Kami Membantu Mereka
                   </h2>
-                  <p class="w-full text-lg pb-6">
+                  <p class="w-full pb-6 text-lg">
                     Rejeki lancar dengan melakukan donasi kepada mereka yang
                     membutuhkan
                   </p>
                   <div
-                    class="grid grid-cols-1 lg:grid-cols-3 space-y-4 lg:space-y-0 w-full h-max"
+                    class="grid w-full grid-cols-1 space-y-4 lg:grid-cols-3 lg:space-y-0 h-max"
                   >
                     <div class="flex flex-col justify-center space-y-2">
                       <h3
-                        class="text-primary-light text-4xl font-bold counter"
+                        class="text-4xl font-bold text-primary-light counter"
                         data-count="890"
                         data-count-prefix="IDR "
                         data-count-suffix="M+"
                       ></h3>
-                      <span class="text-light/80 text-2xl font-semibold"
+                      <span class="text-2xl font-semibold text-light/80"
                         >Donasi Terkumpul</span
                       >
                     </div>
                     <div class="flex flex-col justify-center space-y-2">
                       <h3
-                        class="text-primary-light text-4xl font-bold counter"
+                        class="text-4xl font-bold text-primary-light counter"
                         data-count="29000"
                       ></h3>
-                      <span class="text-light/80 text-2xl font-semibold"
+                      <span class="text-2xl font-semibold text-light/80"
                         >Galang Dana</span
                       >
                     </div>
                     <div class="flex flex-col justify-center space-y-2">
                       <h3
-                        class="text-primary-light text-4xl font-bold counter"
+                        class="text-4xl font-bold text-primary-light counter"
                         data-count="5000"
                       ></h3>
-                      <span class="text-light/80 text-2xl font-semibold"
+                      <span class="text-2xl font-semibold text-light/80"
                         >Donatur</span
                       >
                     </div>
@@ -280,14 +287,88 @@
               </div>
             </div>
           </section>
-          <section class="min-h-screen bg-grey h-full"></section>
-          <footer class="bg-dark pt-10 pb-36 md:pb-10">
+          <section class="h-full min-h-screen bg-grey">
+            <div class="container px-6 mx-auto">
+              <div class="swiper">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">         
+                      <div class="bg-white border border-gray-200 rounded-lg shadow-md lg:max-w-sm dark:bg-gray-800 dark:border-gray-700">
+                          <a href="#">
+                              <img class="object-cover w-full rounded-t-lg h-60" src="img/istockphoto-1151016254-170667a.jpg" alt="" />
+                          </a>
+                          <div class="p-5">
+                              <a href="#">
+                                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                      Kekurangan Makanan
+                                  </h5>
+                              </a>
+                              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                              <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                  Donasikan
+                                  <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                              </a>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="bg-white border border-gray-200 rounded-lg shadow-md lg:max-w-sm dark:bg-gray-800 dark:border-gray-700">
+                          <a href="#">
+                              <img class="object-cover w-full rounded-t-lg h-60" src="img/istockphoto-538752303-612x612.jpg" alt="" />
+                          </a>
+                          <div class="p-5">
+                              <a href="#">
+                                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> 
+                                      Membantu kemiskinan di desa
+                                  </h5>
+                              </a>
+                              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                              <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                  Donasikan
+                                  <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                              </a>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      
+                  <div class="bg-white border border-gray-200 rounded-lg shadow-md lg:max-w-sm dark:bg-gray-800 dark:border-gray-700">
+                      <a href="#">
+                          <img class="object-cover w-full rounded-t-lg h-60" src="img/ilse-orsel-J5EUUY7SuLk-unsplash.jpg" alt="" />
+                      </a>
+                      <div class="p-5">
+                          <a href="#">
+                              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Sedekah untuk Taman Baca</h5>
+                          </a>
+                          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                          <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                              Donasikan
+                              <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                          </a>
+                      </div>
+                  </div>
+                    </div>
+                  </div>
+                  <!-- If we need pagination -->
+                  <!-- <div class="swiper-pagination"></div> -->
+                
+                  <!-- If we need navigation buttons -->
+                  <!-- <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                 -->
+                  <!-- If we need scrollbar -->
+                  <!-- <div class="swiper-scrollbar"></div> -->
+              </div>
+          </div>
+          </section>
+          <footer class="pt-10 bg-dark pb-36 md:pb-10">
             <div class="container mx-auto md:flex md:justify-between">
               <div class="mb-6 md:mb-0">
                 <a href="/" class="flex items-center">
                   <img
                     src="logo.png"
-                    class="mr-3 h-10 sm:h-12"
+                    class="h-10 mr-3 sm:h-12"
                     alt="FlowBite Logo"
                   />
                   <span
@@ -295,16 +376,16 @@
                     >Socaco</span
                   >
                 </a>
-                <div class="bg-dark pt-6 space-y-4">
+                <div class="pt-6 space-y-4 bg-dark">
                   <h4 class="text-2xl font-semibold">
                     Dapatkan lebih banyak pembaruan...
                   </h4>
                   <div
-                    class="flex items-center h-max space-x-2 md:space-x-4 w-full"
+                    class="flex items-center w-full space-x-2 h-max md:space-x-4"
                   >
-                    <div class="relative h-full flex-1">
+                    <div class="relative flex-1 h-full">
                       <div
-                        class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
+                        class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
                       >
                         <svg
                           aria-hidden="true"
@@ -324,13 +405,13 @@
                       <input
                         type="text"
                         id="input-group-1"
-                        class="h-full bg-grey border border-grey rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 py-3 px-5 text-sm md:text-base"
+                        class="block w-full h-full px-5 py-3 pl-10 text-sm border rounded-lg bg-grey border-grey focus:ring-blue-500 focus:border-blue-500 md:text-base"
                         placeholder="Enter your email"
                       />
                     </div>
                     <button
                       type="button"
-                      class="text-light bg-primary-dark hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base px-5 py-3 text-center waves-effect w-max"
+                      class="px-5 py-3 text-base font-medium text-center rounded text-light bg-primary-dark hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary/40 waves-effect w-max"
                     >
                       Subscribe
                     </button>
@@ -338,10 +419,10 @@
                 </div>
               </div>
               <div
-                class="grid grid-cols-2 place-items-center gap-8 sm:gap-6 sm:grid-cols-3"
+                class="grid grid-cols-2 gap-8 place-items-center sm:gap-6 sm:grid-cols-3"
               >
                 <div class="w-full">
-                  <h2 class="mb-6 font-semibold text-light uppercase">
+                  <h2 class="mb-6 font-semibold uppercase text-light">
                     Tautan
                   </h2>
                   <ul class="text-light/60">
@@ -354,7 +435,7 @@
                   </ul>
                 </div>
                 <div class="w-full">
-                  <h2 class="mb-6 font-semibold text-light uppercase">
+                  <h2 class="mb-6 font-semibold uppercase text-light">
                     Ikuti Kami
                   </h2>
                   <ul class="text-light/60">
@@ -367,7 +448,7 @@
                   </ul>
                 </div>
                 <div class="w-full">
-                  <h2 class="mb-6 font-semibold text-light uppercase">Legal</h2>
+                  <h2 class="mb-6 font-semibold uppercase text-light">Legal</h2>
                   <ul class="text-light/60">
                     <li class="mb-4">
                       <a href="#" class="hover:underline">Kebijakan Privasi</a>
@@ -383,7 +464,7 @@
             </div>
             <hr class="container my-6 border-grey sm:mx-auto lg:my-8" />
             <div class="container sm:flex sm:items-center sm:justify-center">
-              <span class="text-light/60 text-center"
+              <span class="text-center text-light/60"
                 >© 2022 <a href="/" class="hover:underline">Socaco™</a>. All
                 Rights Reserved.
               </span>
@@ -393,7 +474,7 @@
       </div>
     </main>
 
-    \
+    
     <script src="js/vendor/locomotive-scroll.min.js"></script>
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/materialize.min.js"></script>
@@ -437,5 +518,44 @@
 
       gtag("config", "G-2N46K9Z3CY");
     </script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    // If we need pagination
+  //   autoplay: {
+  //           delay: 2500,
+  //           disableOnInteraction: false,
+  //         },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
+  },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+  </script>
   </body>
 </html>

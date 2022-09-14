@@ -10,6 +10,23 @@ $(function () {
     },
   });
 
+  $("[data-aos]").css('transition-duration', "0.5s")
+  scroll.on('scroll', (args) => {
+    const appearScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          $(entry.target).addClass('aos-animate');
+          appearScroll.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.5
+    });
+    Array.from($("[data-aos]")).map((element) => {
+      appearScroll.observe(element);
+    });
+  });
+
   $(".nav-indicator a").each(function () {
     if (window.location.href.includes($(this).attr("href"))) {
       $(".nav-indicator a").removeClass("current");
@@ -42,7 +59,6 @@ $(function () {
     return e.parentNode && hasParentClass(e.parentNode, classname);
   }
 
-  // http://coveroverflow.com/a/11381730/989439
   function mobilecheck() {
     var check = false;
     (function (a) {

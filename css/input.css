@@ -23,24 +23,9 @@ html {
   .nav-indicator .current {
     @apply text-light;
   }
-  /* Box colors */
-  .bg-1 {
-    background: #eceff1;
-    color: #37474f;
-  }
-  .bg-2 {
-    background: #7986cb;
-    color: #eceff1;
-  }
-  .bg-3 {
-    background: #37474f;
-    color: #fff;
-  }
 
-  /* Common btn styles */
   .btn-animate {
     display: block;
-    /* border: none; */
     background: none;
     color: inherit;
     vertical-align: middle;
