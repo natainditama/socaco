@@ -39,7 +39,7 @@ html.has-scroll-dragging {
   height: 100%;
   transform-origin: center right;
   transition: transform 0.3s, opacity 0.3s;
-  opacity: 0;
+  opacity: 1;
   z-index: 100;
 }
 .c-scrollbar:hover {
