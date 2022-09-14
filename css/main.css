@@ -1422,6 +1422,11 @@ video {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(230 92 0 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'https\:\/\/images\.unsplash\.com\/photo-1578357078586-491adf1aa5ba\?ixlib\=rb-1\.2\.1\&ixid\=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dm9sdW50ZWVyfGVufDB8MXwwfHw\%3D\&auto\=format\&fit\=crop\&w\=500\&q\=60\'\)\] {
   background-image: url('https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dm9sdW50ZWVyfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60');
 }
@@ -1528,6 +1533,11 @@ video {
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .pt-32 {
@@ -1696,6 +1706,11 @@ video {
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
+.text-grey {
+  --tw-text-opacity: 1;
+  color: rgb(62 57 57 / var(--tw-text-opacity));
+}
+
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -1765,6 +1780,11 @@ html {
   color: rgb(246 244 244 / var(--tw-text-opacity));
 }
 
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -1783,6 +1803,11 @@ html {
 .focus\:border-blue-600:focus {
   --tw-border-opacity: 1;
   border-color: rgb(37 99 235 / var(--tw-border-opacity));
+}
+
+.focus\:border-primary-light:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 102 0 / var(--tw-border-opacity));
 }
 
 .focus\:outline-none:focus {
@@ -1828,6 +1853,20 @@ html {
 .focus\:ring-blue-500:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-primary\/60:focus {
+  --tw-ring-color: rgb(230 92 0 / 0.6);
+}
+
+.focus\:ring-primary-light:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(255 102 0 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-primary:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(230 92 0 / var(--tw-ring-opacity));
 }
 
 .peer:-moz-placeholder-shown ~ .peer-placeholder-shown\:translate-y-0 {
@@ -2162,6 +2201,10 @@ html {
 
   .lg\:pt-24 {
     padding-top: 6rem;
+  }
+
+  .lg\:pt-0 {
+    padding-top: 0px;
   }
 
   .lg\:text-5xl {
