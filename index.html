@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="id">
+<html lang="id">
   <head>
     <meta charset="utf-8" />
     <title></title>
@@ -32,181 +32,290 @@
   </head>
 
   <body>
-    <nav
-      class="backdrop-blur-sm px-2 sm:px-4 py-2.5 fixed w-full z-40 top-0 left-0 border-b-2 bg-dark/80 border-grey"
-    >
-      <div
-        class="container flex flex-wrap justify-between items-center mx-auto"
+    <main id="page-container" class="page-container">
+      <header
+        id="header"
+        class="backdrop-blur-sm px-2 sm:px-4 py-2.5 fixed w-full top-0 left-0 border-b-2 bg-dark/80 border-grey z-[60]"
       >
-        <a href="/" class="flex items-center">
-          <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            class="mr-3 h-6 sm:h-9"
-            alt="Logo"
-          />
-          <span
-            class="self-center text-xl font-semibold whitespace-nowrap text-light"
-            >Socaco</span
-          >
-        </a>
-        <div class="flex">
-          <button
-            data-collapse-toggle="navbar-sticky"
-            type="button"
-            class="inline-flex items-center p-2 text-base rounded-lg md:hidden hover:bg-grey focus:outline-none focus:ring-2 focus:ring-light/50 text-light"
-            aria-controls="navbar-sticky"
-            aria-expanded="false"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
-        </div>
         <div
-          class="hidden relative justify-between items-center w-full md:flex md:w-auto space-x-4"
+          class="container flex justify-between items-center mx-auto min-h-[3rem]"
         >
-          <ul
-            class="nav-indicator relative flex flex-col p-4 mt-4 rounded-lg border md:flex-row md:space-x-8 md:mt-0 md:text-base md:font-medium md:border-0"
-          >
-            <div class="nav-pointer"></div>
-            <li class="md:!ml-0">
-              <a
-                href="#"
-                class="current block py-2 px-4 text-light/60 rounded hover:text-light md:p-0"
-                aria-current="page"
-                >Beranda</a
+          <div class="flex pr-4">
+            <a href="/" class="flex items-center">
+              <img
+                src="https://flowbite.com/docs/images/logo.svg"
+                class="mr-3 h-6 sm:h-9"
+                alt="Logo"
+              />
+            </a>
+            <form class="w-full lg:w-96 flex-1">
+              <label
+                for="default-search"
+                class="mb-2 text-sm font-medium text-light sr-only"
+                >Search</label
               >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 px-4 text-light/60 rounded hover:text-light md:p-0"
-                >Visi dan Misi</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 px-4 text-light/60 rounded hover:text-light md:p-0"
-                >Tentang Kami</a
-              >
-            </li>
-          </ul>
-          <button
-            type="button"
-            class="text-light bg-primary hover:bg-primary-dark focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base px-5 py-2.5 text-center"
-          >
-            Donasi Sekarang
-          </button>
-        </div>
-      </div>
-    </nav>
-
-    <main data-scroll-container="">
-      <section
-        class="pt-32 pb-20 h-full flex"
-        data-scroll
-        data-scroll-speed="-3"
-      >
-        <div class="container mx-auto h-full flex-1">
-          <div class="grid grid-cols-1 lg:grid-cols-3 h-full">
-            <div
-              class="flex flex-col justify-center space-y-4"
-              data-scroll
-              data-scroll-speed="1"
-            >
-              <h1 class="text-4xl lg:text-5xl font-bold">
-                Ulurkan tanganmu dan bantu mereka.
-              </h1>
-              <p class="text-base">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error
-                animi voluptas perspiciatis enim nesciunt iste labore, dolores
-                consequuntur consectetur quas, quisquam minus.
-              </p>
-            </div>
-            <div
-              class="flex items-center justify-end lg:col-span-2 mt-10 md:mb-0"
-            >
-              <div class="lg:w-4/5">
-                <img
-                  src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2hhcml0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                  class="w-full"
-                  alt="Hero"
+              <div class="relative">
+                <div
+                  class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-5 h-5 text-light"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  id="default-search"
+                  class="block px-5 py-3 pl-10 w-full text-sm text-light rounded-lg border border-transparent focus:ring-transparent focus:border-light bg-grey"
+                  placeholder="Search here..."
+                  required=""
                 />
               </div>
-            </div>
+            </form>
+          </div>
+          <div class="flex">
+            <button
+              type="button"
+              class="inline-flex items-center p-2 text-base rounded-lg md:hidden hover:bg-grey focus:outline-none focus:ring-2 focus:ring-light/50 text-light open-sidebar"
+              aria-controls="sidebar"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <div
+            class="hidden relative justify-between items-center w-full md:flex md:w-auto space-x-4"
+          >
+            <ul
+              class="nav-indicator relative flex flex-col p-4 mt-4 rounded-lg border md:flex-row md:space-x-8 md:mt-0 md:text-base md:font-medium md:border-0"
+            >
+              <div class="nav-pointer"></div>
+              <li class="md:!ml-0">
+                <a
+                  href="index.html"
+                  class="block py-2 px-4 text-light/60 rounded hover:text-light md:p-0"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="categories.html"
+                  class="block py-2 px-4 text-light/60 rounded hover:text-light md:p-0"
+                  >Category</a
+                >
+              </li>
+              <li>
+                <a
+                  href="list.html"
+                  class="block py-2 px-4 text-light/60 rounded hover:text-light md:p-0"
+                  >Donation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="signin.html"
+                  class="block py-2 px-4 text-light/60 rounded hover:text-light md:p-0"
+                  >Sign In</a
+                >
+              </li>
+            </ul>
+            <a
+              href="signup.html"
+              class="text-light bg-primary-dark hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base px-6 py-2.5 text-center waves-effect btn-animate"
+            >
+              Sign Up
+            </a>
           </div>
         </div>
-      </section>
-      <!-- <section class="bg-light h-full py-14">
-        <div class="container mx-auto h-full">
-          <div class="grid grid-cols-3 h-full">
-            <div class="flex flex-col justify-center space-y-2">
-              <h3 class="text-primary-dark text-5xl font-bold">290,000+</h3>
-              <span class="text-dark text-3xl font-semibold">Donatur</span>
-            </div>
-            <div class="flex flex-col justify-center space-y-2">
-              <h3 class="text-primary-dark text-5xl font-bold">290,000+</h3>
-              <span class="text-dark text-3xl font-semibold">Donatur</span>
-            </div>
-            <div class="flex flex-col justify-center space-y-2">
-              <h3 class="text-primary-dark text-5xl font-bold">290,000+</h3>
-              <span class="text-dark text-3xl font-semibold">Donatur</span>
-            </div>
-          </div>
+      </header>
+      <aside id="sidebar" class="page-menu page-effect-4" id="menu-4">
+        <ul class="px-6">
+          <li><a class="" href="index.html">Home</a></li>
+          <li><a class="" href="categories.html">Category</a></li>
+          <li><a class="" href="list.html">Donation</a></li>
+        </ul>
+        <div class="grid grid-cols-2 px-6 py-8 gap-6 auth">
+          <a
+            href="signin.html"
+            class="text-light bg-transparent border-2 border-primary-dark hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base py-2.5 text-center waves-effect btn-animate right"
+          >
+            Sign In
+          </a>
+          <a
+            href="signup.html"
+            class="text-light bg-primary-dark border-2 border-primary-dark hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base py-2.5 text-center waves-effect btn-animate whitespace-nowrap left"
+          >
+            Sign Up
+          </a>
         </div>
-      </section> -->
-      <section class="bg-grey/50 h-full py-32 pt-40">
-        <div class="container mx-auto h-full">
-          <div class="flex flex-col items-center space-y-6">
-            <h2 class="text-light font-bold text-5xl" data-scroll>
-              Bantu Mereka
-            </h2>
-            <p class="md:w-96 text-center w-full" data-scroll>
-              Sedikit dari anda akan sangat berarti untuk meringankan beban
-              mereka.
-            </p>
-            <div class="grid grid-cols-3 h-full">
-              <div class="flex flex-col bg-light">
-                <div class="">
-                  <img
-                    src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y2hhcml0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                    alt=""
-                  />
+      </aside>
+      <div class="page-pusher">
+        <div class="page-content bg-dark" data-scroll-container="">
+          <section
+            class="pt-32 pb-20 h-full flex"
+            data-scroll
+            data-scroll-speed="-3"
+          >
+            <div class="container mx-auto h-full flex-1">
+              <div class="grid grid-cols-1 lg:grid-cols-3 h-full">
+                <div
+                  class="flex flex-col justify-center space-y-4"
+                  data-scroll
+                  data-scroll-speed="1"
+                >
+                  <h1 class="text-4xl lg:text-6xl font-bold">
+                    Ulurkan tanganmu dan bantu mereka
+                  </h1>
+                  <p class="text-base">
+                    Lorem ipsum dolor sit amet, adipisicing elit. Quia a natus
+                    debitis eos cupiditate eveniet quae.
+                  </p>
+                  <button
+                    type="button"
+                    class="text-light bg-primary-dark hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base px-5 py-3 text-center waves-effect w-max"
+                  >
+                    Donasi Sekarang
+                  </button>
                 </div>
-                <div class="text-dark p-6">
-                  <h4 class="text-xl font-semibold">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </h4>
-                  <span class="text-primary-dark text-sm">Sarah Doe</span>
+                <div
+                  class="flex items-center justify-end lg:col-span-2 mt-10 md:mb-0"
+                >
+                  <div class="lg:w-4/5">
+                    <img
+                      src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2hhcml0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                      class="w-full"
+                      alt="Hero"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
+          <section class="bg-grey h-full py-32 pt-40">
+            <div class="container mx-auto h-full">
+              <div class="grid grid-cols-1 lg:grid-cols-3 space-x-20 h-full">
+                <div class="relative h-full overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dm9sdW50ZWVyfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                    alt=""
+                  />
+                  <div
+                    class="absolute inset-0 top-[-100%] bottom-[-100%]"
+                    id="fixed-target"
+                  ></div>
+                  <div
+                    data-scroll=""
+                    data-scroll-speed="0.5"
+                    data-scroll-sticky=""
+                    data-scroll-target="#fixed-target"
+                    class="absolute inset-0 top-[-100%] bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dm9sdW50ZWVyfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60')]"
+                  ></div>
+                </div>
+                <div
+                  class="flex flex-col items-center justify-center lg:col-span-2 space-y-4 py-20"
+                >
+                  <h2 class="text-4xl lg:text-6xl font-bold">
+                    Visi dan Misi kami membantu mereka
+                  </h2>
+                  <p class="w-full text-lg pb-6">
+                    Rejeki lancar dengan melakukan donasi kepada mereka yang
+                    membutuhkan
+                  </p>
+                  <div class="grid grid-cols-3 w-full h-max">
+                    <div class="flex flex-col justify-center space-y-2">
+                      <h3
+                        class="text-primary-light text-4xl font-bold counter"
+                        data-count="890"
+                        data-count-prefix="IDR "
+                        data-count-suffix="M+"
+                      ></h3>
+                      <span class="text-light/80 text-2xl font-semibold"
+                        >Donasi Terkumpul</span
+                      >
+                    </div>
+                    <div class="flex flex-col justify-center space-y-2">
+                      <h3
+                        class="text-primary-light text-4xl font-bold counter"
+                        data-count="29000"
+                      ></h3>
+                      <span class="text-light/80 text-2xl font-semibold"
+                        >Galang Dana</span
+                      >
+                    </div>
+                    <div class="flex flex-col justify-center space-y-2">
+                      <h3
+                        class="text-primary-light text-4xl font-bold counter"
+                        data-count="5000"
+                      ></h3>
+                      <span class="text-light/80 text-2xl font-semibold"
+                        >Donatur</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="min-h-screen bg-grey h-full"></section>
         </div>
-      </section>
-      <section class="min-h-screen bg-primary h-full flex"></section>
+      </div>
     </main>
 
     <script src="js/vendor/locomotive-scroll.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.min.js"
-      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/main.js"></script>
+    <script type="module" defer>
+      import { CountUp } from "https://inorganik.github.io/countUp.js//dist/countUp.js";
+
+      const appearScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            let demo = new CountUp(
+              entry.target,
+              $(entry.target).data("count"),
+              {
+                separator: ".",
+                prefix: $(entry.target).data("count-prefix") ?? "",
+                suffix: $(entry.target).data("count-suffix") ?? "+",
+              }
+            );
+            demo.start();
+            appearScroll.unobserve(entry.target);
+          }
+        });
+      }, {});
+
+      Array.from($(".counter")).map((element) => {
+        appearScroll.observe(element);
+      });
+    </script>
 
     <!-- Google tag (gtag.js) -->
     <script
