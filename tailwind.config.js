@@ -4,7 +4,7 @@ const colors = require("tailwindcss/colors");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./**/*.html", "./js/main.js"],
-  darkMode: "media",
+  darkMode: "class",
   theme: {
     fontFamily: {
       outfit: ["Outfit", ...defaultTheme.fontFamily.sans],
@@ -22,8 +22,11 @@ module.exports = {
       ...colors,
     },
     container: {
+      center: true,
       padding: {
         DEFAULT: "1.5rem",
+        lg: "2rem",
+        xl: "2.5rem",
       },
     },
     extend: {},
