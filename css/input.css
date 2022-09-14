@@ -244,4 +244,55 @@ html {
   .page-effect-4.page-menu::after {
     display: none;
   }
+  .sticky-container {
+    position: relative;
+    width: 100%;
+    /* min-height: 100vh; */
+  }
+
+  .space-holder {
+    position: relative;
+    width: 100%;
+  }
+
+  .sticky-slider {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 2.5rem;
+    overflow-x: hidden;
+    @apply h-[90vh] lg:h-screen;
+  }
+
+  .horizontal {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    /* height: 100%; */
+    will-change: transform;
+  }
+
+  .cards {
+    position: relative;
+    height: 100%;
+    /* padding: 0 0 0 150px; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .sample-card {
+    position: relative;
+    height: 300px;
+    width: 500px;
+    background-color: #111f30;
+    margin-right: 20px;
+    flex-shrink: 0;
+    background-position: center;
+    background-size: cover;
+  }
 }

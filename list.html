@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <title>Donasi - Social Care Community</title>
+    <meta
+      name="description"
+      content="Socaco - Social Care Community. Situs Donasi Online Terbesar dan Terpercaya di Indonesia"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="Socaco - Social Care Community" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://natainditama.github.io/socaco/" />
+    <meta property="og:image" content="" />
+    <meta name="theme-color" content="#2C2727" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="logo.png" />
+    <link rel="shortcut icon" href="logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/flowbite.min.css" />
+    <link rel="stylesheet" href="css/locomotive-scroll.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <main id="page-container" class="page-container">
+      <header
+        id="header"
+        class="backdrop-blur-sm px-2 sm:px-4 py-2.5 fixed w-full top-0 left-0 border-b-2 bg-dark/80 border-grey z-[60]"
+      >
+        <div
+          class="container flex justify-between items-center mx-auto min-h-[3rem]"
+        >
+          <div class="flex pr-4">
+            <a href="/" class="flex items-center">
+              <img src="logo.png" class="mr-3 h-10 sm:h-12" alt="Logo" />
+            </a>
+            <form class="w-full lg:w-96 flex-1">
+              <label
+                for="default-search"
+                class="mb-2 font-medium text-light sr-only"
+                >Search</label
+              >
+              <div class="relative">
+                <div
+                  class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-5 h-5 text-light"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  id="default-search"
+                  class="block px-5 py-3 pl-10 w-full text-light rounded-lg border border-transparent focus:ring-transparent focus:border-light bg-grey"
+                  placeholder="Search here..."
+                  required=""
+                />
+              </div>
+            </form>
+          </div>
+          <div class="flex">
+            <button
+              type="button"
+              class="inline-flex items-center p-2 text-base rounded-lg md:hidden hover:bg-grey focus:outline-none focus:ring-2 focus:ring-light/50 text-light open-sidebar"
+              aria-controls="sidebar"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <div
+            class="hidden relative justify-between items-center w-full md:flex md:w-auto space-x-4"
+          >
+            <ul
+              class="nav-indicator relative flex flex-col p-4 mt-4 rounded-lg border md:flex-row md:space-x-8 md:mt-0 md:text-base md:font-medium md:border-0"
+            >
+              <div class="nav-pointer"></div>
+              <li class="md:!ml-0">
+                <a
+                  href="index.html"
+                  class="block py-2 px-4 text-light/60 rounded hover:text-light md:p-0"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="categories.html"
+                  class="block py-2 px-4 text-light/60 rounded hover:text-light md:p-0"
+                  >Kategori</a
+                >
+              </li>
+              <li>
+                <a
+                  href="list.html"
+                  class="block py-2 px-4 text-light/60 rounded hover:text-light md:p-0"
+                  >Donasi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="signin.html"
+                  class="block py-2 px-4 text-light/60 rounded hover:text-light md:p-0"
+                  >Masuk</a
+                >
+              </li>
+            </ul>
+            <a
+              href="signup.html"
+              class="text-light bg-primary-dark hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base px-6 py-2.5 text-center waves-effect btn-animate"
+            >
+              Daftar
+            </a>
+          </div>
+        </div>
+      </header>
+      <aside id="sidebar" class="page-menu page-effect-4" id="menu-4">
+        <ul class="px-6">
+          <li><a class="" href="index.html">Beranda</a></li>
+          <li><a class="" href="categories.html">Kategori</a></li>
+          <li><a class="" href="list.html">Donasi</a></li>
+        </ul>
+        <div class="grid grid-cols-2 px-6 py-8 gap-6 auth">
+          <a
+            href="signin.html"
+            class="text-light bg-transparent border-2 border-primary-dark hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base py-2.5 text-center waves-effect btn-animate -translate-x-[200%]"
+          >
+            Masuk
+          </a>
+          <a
+            href="signup.html"
+            class="text-light bg-primary-dark border-2 border-primary-dark hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base py-2.5 text-center waves-effect btn-animate whitespace-nowrap translate-x-[200%]"
+          >
+            Daftar
+          </a>
+        </div>
+      </aside>
+      <div class="page-pusher">
+        <div class="page-content bg-dark" data-scroll-container="">
+          <div id="top"></div>
+          <section class="lg:pt-20 h-full flex">
+            <div class="container mx-auto h-full flex-1">
+              <div class="sticky-container">
+                <div class="space-holder" id="sticky-slider">
+                  <div
+                    class="sticky-slider"
+                    data-scroll=""
+                    data-scroll-sticky=""
+                    data-scroll-target="#sticky-slider"
+                  >
+                    <div
+                      class="flex flex-col justify-center items-center text-center space-y-4"
+                    >
+                      <h1 class="text-4xl lg:text-6xl font-bold">
+                        Bantu Beban Mereka
+                      </h1>
+                      <p class="text-base w-full lg:w-3/4">
+                        Mari kita sama-sama membantu saudara kita yang sedang
+                        dilanda musibah. Satu rupiah dari harta yang
+                        disumbangkan akan sangat bermanfaat bagi mereka yang
+                        sedang membutuhkan bantuan.
+                      </p>
+                      <button
+                        type="button"
+                        class="text-light bg-primary-dark hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base px-5 py-3 text-center waves-effect w-max"
+                      >
+                        Donasi Sekarang
+                      </button>
+                    </div>
+                    <div class="horizontal">
+                      <div role="feed" class="cards">
+                        <article
+                          class="sample-card"
+                          style="
+                            background-image: url(img/ilse-orsel-J5EUUY7SuLk-unsplash.jpg);
+                          "
+                        ></article>
+                        <article
+                          class="sample-card"
+                          style="
+                            background-image: url(img/imdadul-hussain-YiA4wqVpLQQ-unsplash.jpg);
+                          "
+                        ></article>
+                        <article
+                          class="sample-card"
+                          style="
+                            background-image: url(img/istockphoto-1151016254-170667a.jpg);
+                          "
+                        ></article>
+                        <article
+                          class="sample-card"
+                          style="
+                            background-image: url(img/istockphoto-1283348520-612x612.jpg);
+                          "
+                        ></article>
+                        <article
+                          class="sample-card"
+                          style="
+                            background-image: url(img/istockphoto-538752303-612x612.jpg);
+                          "
+                        ></article>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="h-full pb-20">
+            <div class="container mx-auto h-full">
+              <div class="grid grid-cols-1 lg:grid-cols-3 lg:space-x-10 h-full">
+                <div
+                  class="flex flex-col items-center justify-center lg:col-span-2 space-y-4 pt-8 lg:pt-24"
+                  id="content-desc"
+                >
+                  <p class="text-lg indent-8">
+                    Saat anak-anak mendapat gizi yang cukup di usia yang tepat
+                    maka masa pertumbuhan mereka akan terlalui dengan penuh
+                    keceriaan. Tetapi ketika hal tersebut tidak terjadi, mereka
+                    dapat menderita gizi buruk, hal paling berbahaya dan bisa
+                    merampas masa depan seorang anak.
+                  </p>
+                  <p class="text-lg indent-8">
+                    Seperti Alifah (2), masa pertumbuhannya terancam oleh gizi
+                    buruk. Ibu dan bapaknya berusaha membawa Alifah dari satu
+                    klinik ke klinik lainnya, mereka berbulan-bulan mencari
+                    solusi terbaik untuk mengejar kesembuhan Alifah dari gizi
+                    buruk.
+                  </p>
+                  <strong class="text-lg indent-8"
+                    >Saking kurusnya, bentuk tulang rusuk Alifah sempat terlihat
+                    jelas saat ia pertama kali dikunjungi oleh ahli gizi dari
+                    Puskesmas Grobogan. "Suasana hati saya waktu itu gak karuan,
+                    sedih sekali," ujar Ibu Alifah.</strong
+                  >
+                  <div
+                    class="relative h-full overflow-hidden w-full py-2"
+                    data-aos="fade-down"
+                  >
+                    <img
+                      src="https://www.supportunicefindonesia.org/upload/image/kirim-obat-gizi-untuk-2-juta-anak/image-landing-page.jpg?1639123943837"
+                      class="w-full"
+                      alt="Help"
+                    />
+                    <!-- <div
+                      class="absolute inset-0 top-[-100%] bottom-[-50%]"
+                      id="fixed-target"
+                    ></div>
+                    <div
+                      data-scroll=""
+                      data-scroll-speed="0.5"
+                      data-scroll-sticky=""
+                      data-scroll-target="#fixed-target"
+                      class="absolute inset-0 top-[-100%] bg-contain bg-no-repeat bg-center bg-[url('https://www.supportunicefindonesia.org/upload/image/kirim-obat-gizi-untuk-2-juta-anak/image-landing-page.jpg?1639123943837')]"
+                    ></div> -->
+                  </div>
+                  <p class="text-lg indent-8">
+                    Bantu anak-anak kembali sehat dan pulih hingga mereka bisa
+                    melangkah tegap kembali, menghiasi senyum bapak dan ibunya.
+                  </p>
+                  <p class="text-lg indent-8">
+                    Donasi sekarang untuk menolong 2 Juta Anak lainnya yang
+                    masih mengalami gizi buruk. Bantu UNICEF menjangkau
+                    anak-anak ini, untuk memastikan perawatan dan keselamatan
+                    mereka. Mulai komitmen Anda sekarang dan dapatkan gelang
+                    Pendekar Anak UNICEF, dengan berdonasi bulanan mulai dari Rp
+                    150.000,-
+                  </p>
+                </div>
+                <div
+                  class="sticky top-0 mt-20 lg:mt-24 h-max bg-light py-8 px-6 -order-1 lg:order-none"
+                  data-scroll=""
+                  data-scroll-sticky=""
+                  data-scroll-target="#content-desc"
+                >
+                  <div class="flex flex-col space-y-4">
+                    <h4 class="text-dark font-semibold text-2xl">
+                      Menolong Anak yang Masih Mengalami Gizi Buruk
+                    </h4>
+                    <div class="grid grid-cols-2 gap-4">
+                      <button
+                        type="button"
+                        class="border-2 text-dark border-primary-light hover:bg-primary hover:text-light focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base py-3 text-center waves-effect w-full"
+                      >
+                        IDR 200.000
+                      </button>
+                      <button
+                        type="button"
+                        class="border-2 text-dark border-primary-light hover:bg-primary hover:text-light focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base py-3 text-center waves-effect w-full"
+                      >
+                        IDR 500.000
+                      </button>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                      <button
+                        type="button"
+                        class="border-2 text-dark border-primary-light hover:bg-primary hover:text-light focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base py-3 text-center waves-effect w-w-full"
+                      >
+                        IDR 1.000.000
+                      </button>
+                      <button
+                        type="button"
+                        class="border-2 text-dark border-primary-light hover:bg-primary hover:text-light focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base py-3 text-center waves-effect w-full"
+                      >
+                        IDR 3.000.000
+                      </button>
+                    </div>
+                    <button
+                      class="text-light bg-primary-dark hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base px-6 py-2.5 text-center waves-effect btn-animate"
+                    >
+                      Bantu Sekarang
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <footer class="bg-dark pt-10 pb-36 md:pb-10">
+            <div class="container mx-auto md:flex md:justify-between">
+              <div class="mb-6 md:mb-0">
+                <a href="/" class="flex items-center">
+                  <img src="logo.png" class="mr-3 h-10 sm:h-12" alt="Logo" />
+                  <span
+                    class="self-center text-2xl font-semibold whitespace-nowrap text-light"
+                    >Socaco</span
+                  >
+                </a>
+                <div class="bg-dark pt-6 space-y-4">
+                  <h4 class="text-2xl font-semibold">
+                    Dapatkan lebih banyak pembaruan...
+                  </h4>
+                  <div
+                    class="flex items-center h-max space-x-2 md:space-x-4 w-full"
+                  >
+                    <div class="relative h-full flex-1">
+                      <div
+                        class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="w-5 h-5 text-light/80"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                          ></path>
+                          <path
+                            d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <input
+                        type="text"
+                        id="input-group-1"
+                        class="h-full bg-grey border border-grey rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 py-3 px-5 text-sm md:text-base"
+                        placeholder="Enter your email"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      class="text-light bg-primary-dark hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary/40 font-medium rounded text-base px-5 py-3 text-center waves-effect w-max"
+                    >
+                      Subscribe
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="grid grid-cols-2 place-items-center gap-8 sm:gap-6 sm:grid-cols-3"
+              >
+                <div class="w-full">
+                  <h2 class="mb-6 font-semibold text-light uppercase">
+                    Tautan
+                  </h2>
+                  <ul class="text-light/60">
+                    <li class="mb-4">
+                      <a href="#" class="hover:underline">Tentang Kami</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline">Pusat Bantuan</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="w-full">
+                  <h2 class="mb-6 font-semibold text-light uppercase">
+                    Ikuti Kami
+                  </h2>
+                  <ul class="text-light/60">
+                    <li class="mb-4">
+                      <a href="#" class="hover:underline">Instagram</a>
+                    </li>
+                    <li class="">
+                      <a href="#" class="hover:underline">Twitter</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="w-full">
+                  <h2 class="mb-6 font-semibold text-light uppercase">Legal</h2>
+                  <ul class="text-light/60">
+                    <li class="mb-4">
+                      <a href="#" class="hover:underline">Kebijakan Privasi</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >Syarat dan Ketentuan</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <hr class="container my-6 border-grey sm:mx-auto lg:my-8" />
+            <div
+              class="container sm:flex sm:items-center sm:justify-center relative"
+            >
+              <span class="text-light/60 text-center"
+                >© 2022 <a href="/" class="hover:underline">Socaco™</a>. All
+                Rights Reserved.
+              </span>
+              <div class="absolute z-[60] bottom-0 right-8 text-9xl">
+                <a
+                  href="#top"
+                  data-scroll-to=""
+                  class="h-12 w-12 grid place-items-center bg-grey"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    class="fill-light"
+                  >
+                    <path
+                      d="m12 6.879-7.061 7.06 2.122 2.122L12 11.121l4.939 4.94 2.122-2.122z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/vendor/locomotive-scroll.min.js"></script>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/materialize.min.js"></script>
+    <script src="js/vendor/gsap.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-2N46K9Z3CY"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-2N46K9Z3CY");
+    </script>
+  </body>
+</html>

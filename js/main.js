@@ -1,4 +1,15 @@
 $(function () {
+  const spaceHolder = $(".space-holder");
+  const horizontal = $(".horizontal")[0];
+  spaceHolder.css("height", `${calcDynamicHeight(horizontal)}px`);
+
+  function calcDynamicHeight(ref) {
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const objectWidth = ref?.scrollWidth ?? 0;
+    return objectWidth - vw + vh;
+  }
+
   const scroll = new LocomotiveScroll({
     el: document.querySelector("[data-scroll-container]"),
     smooth: true,
@@ -10,18 +21,31 @@ $(function () {
     },
   });
 
-  $("[data-aos]").css('transition-duration', "0.5s")
-  scroll.on('scroll', (args) => {
-    const appearScroll = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          $(entry.target).addClass('aos-animate');
-          appearScroll.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.5
-    });
+  scroll.on("scroll", function (args) {
+    if (horizontal) {
+      horizontal.style.transform = `translateX(-${args.scroll.y / 1.5}px)`;
+    }
+  });
+
+  $(window).on("resize", function () {
+    spaceHolder.css("height", `${calcDynamicHeight(horizontal)}px`);
+  });
+
+  $("[data-aos]").css("transition-duration", "0.5s");
+  scroll.on("scroll", (args) => {
+    const appearScroll = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            $(entry.target).addClass("aos-animate");
+            appearScroll.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
+    );
     Array.from($("[data-aos]")).map((element) => {
       appearScroll.observe(element);
     });
